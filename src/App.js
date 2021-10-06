@@ -34,7 +34,7 @@ export default class App extends React.Component {
     const positiveFeedback = this.countPositiveFeedbackPercentage();
 
     return (
-      <div>
+      <div className='container'>
         <Section title="Please leave feedback">
           <Buttons oneOfState={options} onChange={this.handleChangeFeedback} />
         </Section>

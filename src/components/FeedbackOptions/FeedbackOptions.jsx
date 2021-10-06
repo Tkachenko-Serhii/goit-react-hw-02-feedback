@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CapitalLetter from '../CapitalLetter';
+import s from './FeedbackOptions.module.css';
 
 export default function Buttons({ oneOfState, onChange }) {
   return (
-    <ul>
+    <ul className={s.list}>
       {oneOfState.map(key => (
-        <li key={key}>
-          <button onClick={onChange} value={key}>
+        <li key={key} className={s.item}>
+          <button onClick={onChange} value={key} className={s.button}>
             {CapitalLetter(key)}
           </button>
         </li>

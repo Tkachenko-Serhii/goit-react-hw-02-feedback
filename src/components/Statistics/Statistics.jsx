@@ -2,13 +2,14 @@ import React from 'react';
 import CapitalLetter from '../CapitalLetter';
 import PropTypes from 'prop-types';
 import Notification from '../Notification';
+import s from './Statistics.module.css';
 
 export default function Statistics(props) {
   return (
-    <ul>
+    <ul className={s.list}>
       {props.total > 0 ? (
         Object.keys(props).map(key => (
-          <li key={key}>
+          <li key={key} className={s.item}>
             {key !== 'positiveFeedback'
               ? CapitalLetter(key) + ': ' + props[key] + ''
               : 'Positive feedback: ' + props[key] + '%'}
