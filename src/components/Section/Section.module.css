@@ -1,7 +1,11 @@
 .section {
-  position: relative;
+  margin-bottom: 15px;
 }
 
 .title {
-  margin-bottom: 20px;
+  width: 150px;
+  font-family: 'Akronim', cursive;
+  font-size: 30px;
+  color: rgb(50, 50, 187);
+  margin-bottom: 40px;
 }
