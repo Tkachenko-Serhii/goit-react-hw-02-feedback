@@ -8,7 +8,11 @@ export default function Buttons({ oneOfState, onChange }) {
     <ul className={s.list}>
       {oneOfState.map(key => (
         <li key={key} className={s.item}>
-          <button onClick={onChange} value={key} className={s.button}>
+          <button
+            onClick={e => onChange(e.target.value)}
+            value={key}
+            className={s.button}
+          >
             {CapitalLetter(key)}
           </button>
         </li>

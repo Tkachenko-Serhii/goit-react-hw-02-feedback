@@ -10,8 +10,7 @@ export default class App extends React.Component {
     bad: 0,
   };
 
-  handleChangeFeedback = e => {
-    const value = e.target.value;
+  handleChangeFeedback = value => {
     this.setState({ [value]: this.state[value] + 1 });
   };
 
@@ -34,7 +33,7 @@ export default class App extends React.Component {
     const positiveFeedback = this.countPositiveFeedbackPercentage();
 
     return (
-      <div className='container'>
+      <div className="container">
         <Section title="Please leave feedback">
           <Buttons oneOfState={options} onChange={this.handleChangeFeedback} />
         </Section>
